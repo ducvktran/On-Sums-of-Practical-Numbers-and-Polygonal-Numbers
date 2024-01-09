@@ -20,7 +20,7 @@ practical_numbers_list = [n for n in range(1, limit+1) if is_practical(n)]
 practical_numbers_set = set(practical_numbers_list)
 
 #list of polygonal numbers
-s=4 #change the value of s as desired
+s=20 #change the value of s as desired
 polygon_num_list = [(s-2)*x*(x-1)/2+x for x in range(0, round(limit**0.5)+2)]
 
 #generate set of numbers not expressible as a sum
