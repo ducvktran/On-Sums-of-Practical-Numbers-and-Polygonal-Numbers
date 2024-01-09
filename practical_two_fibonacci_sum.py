@@ -34,11 +34,15 @@ while count < 50:
 non_sums = set()
 for target in range(1,limit+1):
     not_sum = True
-    for fib_num in fib_list:
+    for i, fib_num in enumerate(fib_list):
         if fib_num > target or not_sum == False:
             break
         else:
-            for fib_num_2 in fib_list:
+            len_l = len(fib_list)
+            l2 = fib_list[i:len_l]
+            if fib_num*2 > target:
+                break
+            for fib_num_2 in l2:
                 if fib_num_2 > target - fib_num:
                     break
                 if target - fib_num - fib_num_2 in practical_numbers_set:
